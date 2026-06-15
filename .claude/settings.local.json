@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:sorteo.elrevoltijo.com.uy)",
+      "Bash(curl -s https://sorteo.elrevoltijo.com.uy)",
+      "Bash(curl -s \"https://sorteo.elrevoltijo.com.uy/_next/static/chunks/30b2acec3241fe3e.css?dpl=dpl_2N4AXrF7WiTgFkce2GjVsjzFZ6u6\")",
+      "Bash(grep -oP '--[a-z\\\\-]+:[^;]+')",
+      "Bash(open *)"
+    ]
+  }
+}

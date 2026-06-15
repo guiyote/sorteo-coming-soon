@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2E2F6E" />
+  <title>El Revoltijo — Volvemos pronto</title>
+  <meta name="description" content="El sorteo finalizó. Volvemos pronto con nuevas promociones." />
+  <link rel="icon" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:       #2e2f6e;
+      --primary-light: #4a4b8f;
+      --primary-dark:  #1e1f4e;
+      --accent:        #f4b400;
+      --accent-light:  #ffd54f;
+      --accent-dark:   #c49000;
+    }
+
+    html, body {
+      min-height: 100%;
+      font-family: 'Sora', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background:
+        radial-gradient(circle at top left, rgba(244, 180, 0, 0.16) 0%, transparent 28%),
+        radial-gradient(circle at right,    rgba(46,  47, 110, 0.14) 0%, transparent 26%),
+        linear-gradient(180deg, #faf9fb 0%, #f0f2f6 44%, #eaeef5 100%);
+      background-attachment: fixed;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 32px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 20px 60px rgba(31, 37, 78, 0.10);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle top shimmer */
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9) 40%, transparent);
+    }
+
+    /* accent glow behind the card */
+    .card::after {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(244,180,0,0.18) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card > * { position: relative; z-index: 1; }
+
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-wrap img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.75rem;
+      line-height: 1;
+      color: var(--primary);
+      letter-spacing: 0.04em;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(46, 47, 110, 0.5);
+      border: 1px solid rgba(46, 47, 110, 0.12);
+      border-radius: 999px;
+      padding: 0.3rem 0.875rem;
+      margin-bottom: 1.25rem;
+      background: rgba(255,255,255,0.7);
+    }
+
+    .heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 12vw, 4.5rem);
+      line-height: 0.9;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .heading span {
+      color: var(--accent-dark);
+    }
+
+    .body-text {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: rgba(46, 47, 110, 0.62);
+      margin-bottom: 2rem;
+    }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 99px;
+      margin: 0 auto 2rem;
+    }
+
+    .link-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      border: 1px solid rgba(46, 47, 110, 0.14);
+      border-radius: 14px;
+      padding: 0.75rem 1.5rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .link-home:hover {
+      background: rgba(46, 47, 110, 0.05);
+      border-color: rgba(46, 47, 110, 0.22);
+    }
+
+    .link-home svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Logo El Revoltijo" />
+      <span class="brand">El Revoltijo</span>
+    </div>
+
+    <p class="badge">Sorteo finalizado</p>
+
+    <h1 class="heading">Volvemos<br /><span>pronto</span></h1>
+
+    <div class="divider"></div>
+
+    <p class="body-text">
+      El sorteo de los 30 televisores ha finalizado.<br />
+      Gracias a todos los participantes.<br />
+      Muy pronto tendremos nuevas promociones para vos.
+    </p>
+
+    <a href="https://www.elrevoltijo.com.uy" class="link-home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      Ir a elrevoltijo.com.uy
+    </a>
+  </main>
+</body>
+</html>

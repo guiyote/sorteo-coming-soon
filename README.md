@@ -13,7 +13,6 @@ Una landing page minimalista alojada en `sorteo.elrevoltijo.com.uy` que informa 
 | `index.html` | Página principal (HTML + CSS inline, sin dependencias) |
 | `logo.png` | Logo de El Revoltijo |
 | `CNAME` | Apunta el dominio `sorteo.elrevoltijo.com.uy` a GitHub Pages |
-| `usuarios-*.csv` | Exportación de participantes del sorteo |
 
 ## Despliegue
 
